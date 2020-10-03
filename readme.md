@@ -58,11 +58,11 @@ mkdir ~/.config/mergerfs
 Now create a script that will upload from local to google drive:
 ```sh
 nano ~/scripts/uploadmedia
-screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <insertName>: --delete-empty-src-dirs -v --stats 5s   // name used in rclone config and remove < >
-Press Ctrl + X
-Press Y for yes.
-Press Enter to confirm file name.
-chmod +x ~/scripts/uploadmedia  //to make the script executable.
+screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <insertName>: --delete-empty-src-dirs -v --stats 5s # name used in rclone config and remove < >
+# Press Ctrl + X
+# Press Y for yes.
+# Press Enter to confirm file name.
+chmod +x ~/scripts/uploadmedia  # to make the script executable.
 ```
 Now a crontab that will upload automatically at specific time:
 ```sh
@@ -79,4 +79,4 @@ chmod +x ~/.startup/gdrive
 
 # Nzbget
 
-We will use this to download movies.
+Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
