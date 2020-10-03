@@ -3,7 +3,7 @@
 - The first step is to get Usenet indexers and torrent indexers.
 - Then go to settings and click on "Show advanced settings". This will be helpful to change specific settings.
 
-1) Indexer Setup
+### 1. Indexer Setup
 
 - Set up the indexers in Radarr by going to Settings->Indexers.
 
@@ -49,16 +49,16 @@
 
   
 
-2) Setting up Profiles
+### 2. Setting up Profiles
 
-3) Setting up Quality
+### 3. Setting up Quality
 
-4) Media Management
+### 4. Media Management
 
-5) Connect Plex to Radarr
+### 5. Connect Plex to Radarr
 
-6) Enable "Completed Download Handling"
+### 6. Enable "Completed Download Handling"
 
-7) Enable Rename of files through Radarr
+### 7. Enable Rename of files through Radarr
 
-8) Restart
+### 8. Restart
