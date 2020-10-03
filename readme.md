@@ -80,3 +80,7 @@ chmod +x ~/.startup/gdrive
 # Nzbget
 
 Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
+
+# Radarr
+
+Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
