@@ -58,7 +58,9 @@ mkdir ~/.config/mergerfs
 Now create a script that will upload from local to google drive:
 ```sh
 nano ~/scripts/uploadmedia
-screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <insertName>: --delete-empty-src-dirs -v --stats 5s # name used in rclone config and remove < >
+# paste the below line there
+screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --delete-empty-src-dirs -v --stats 5s 
+# replace mountName that you put in rclone config and do not include < >
 # Press Ctrl + X
 # Press Y for yes.
 # Press Enter to confirm file name.
@@ -80,6 +82,7 @@ nano ~/.startup/gdrive
 Paste the following code there (Copied from the link mentioned)
 
 - I have added few additional parameters to rclone which works good for plex.
+- Remember to replace mountName with your mount name in rclone execution code down below. Remove < > too.
 
 ```sh
 #!/bin/bash
@@ -98,7 +101,7 @@ if [ -e $PID_FILE ]; then
     fi
 fi
 
-/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount gcrypt: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 16M --uid $USER_ID --gid $GROUP_ID --vfs-cache-mode writes
+/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount <mountName>: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 16M --uid $USER_ID --gid $GROUP_ID --vfs-cache-mode writes
 
 PID_FILE=$HOME/.config/mergerfs/mergerfs.pid
 if [ -e $PID_FILE ]; then
@@ -150,7 +153,7 @@ Now to make both the files executable, run the following command
 chmod +x ~/.startup/gdrive
 chmod +x ~/.shutdown/gdrive
 ```
-Restart the appbox box.
+Restart the appbox.
 
 To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard or run ```ps -ef``` in the terminal to see both are running. 
 
