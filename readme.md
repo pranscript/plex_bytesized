@@ -70,12 +70,92 @@ crontab -e
 0 5 * * * ~/scripts/uploadmedia // put this in the file
 Press Ctrl + X,  Y and the Enter
 ```
-Now follow the link and create a startup script:
+Now follow the link and create a startup and shutdown script or can continue from here. This is done so that while restarting the appbox, mount and mergerfs close and starts automatically.
+
+Remember to change USER_ID, GROUP_ID, USER_AGENT. First two can be seen by typing ```id``` in terminal. USER_AGENT can be any random string. So let's create the startup script.
+
 ```sh
-Change the id, group id and user agent
---dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 16M // add these parameters to rclone too
-chmod +x ~/.startup/gdrive
+nano ~/.startup/gdrive
 ```
+Paste the following code there (Copied from the link mentioned)
+
+- I have added few additional parameters to rclone which works good for plex.
+
+```sh
+#!/bin/bash
+
+USER_ID=XXXXX
+GROUP_ID=XXXXX
+USER_AGENT=XXXXXXXXXXXXXXXXX
+
+export TMPDIR=$HOME/tmp
+PID_FILE=$HOME/.config/rclone/rclone.pid
+if [ -e $PID_FILE ]; then
+    PID=`cat $PID_FILE`
+    if ! kill -0 $PID > /dev/null 2>&1; then
+        echo "Removing stale $PID_FILE"
+        rm $PID_FILE
+    fi
+fi
+
+/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount gcrypt: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 16M --uid $USER_ID --gid $GROUP_ID --vfs-cache-mode writes
+
+PID_FILE=$HOME/.config/mergerfs/mergerfs.pid
+if [ -e $PID_FILE ]; then
+    PID=`cat $PID_FILE`
+    if ! kill -0 $PID > /dev/null 2>&1; then
+        echo "Removing stale $PID_FILE"
+        rm $PID_FILE
+    fi
+fi
+
+/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/bin/mergerfs -- -f -o defaults,sync_read,auto_cache,use_ino,allow_other,func.getattr=newest,category.action=all,category.create=ff $HOME/media_tmp:$HOME/mnt/gdrive $HOME/mnt/media_merge
+```
+
+Save it.
+
+Now create a shutdown script from the link or can continue from here:
+
+```sh
+nano ~/.shutdown/gdrive
+```
+Paste this there (Copied from the link mentioned)
+```sh
+#!/bin/bash
+
+PID_FILE=$HOME/.config/rclone/rclone.pid
+/sbin/start-stop-daemon --pidfile $PID_FILE -u $USER -d $HOME -K -a /usr/local/bin/rclone
+
+if [ -e $PID_FILE ]; then
+    PID=`cat $PID_FILE`
+    if ! kill -0 $PID > /dev/null 2>&1; then
+        echo "Removing stale $PID_FILE"
+        rm $PID_FILE
+    fi
+fi
+
+PID_FILE=$HOME/.config/mergerfs/mergerfs.pid
+/sbin/start-stop-daemon --pidfile $PID_FILE -u $USER -d $HOME -K -a /usr/bin/mergerfs
+
+if [ -e $PID_FILE ]; then
+    PID=`cat $PID_FILE`
+    if ! kill -0 $PID > /dev/null 2>&1; then
+        echo "Removing stale $PID_FILE"
+        rm $PID_FILE
+    fi
+fi
+```
+Now to make both the files executable, run the following command
+```sh
+chmod +x ~/.startup/gdrive
+chmod +x ~/.shutdown/gdrive
+```
+Restart the appbox box.
+
+To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard or run ```ps -ef``` in the terminal to see both are running. 
+
+![GitHub Logo](./images/mergerfs.jpg)
+
 
 # Nzbget
 

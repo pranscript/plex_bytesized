@@ -37,4 +37,11 @@ Till now Radarr and Nzbget are communicating to each other. Now it is time to lo
 
 ## 2. Library
 
-- 
+- After settings, create a Movie library for the movies.
+- Put folder path as "/data/mnt/mnt_merge/Movies"
+- Remember, the path should go from "mnt_merge" as the only Plex will be able to find any new downloads.
+- In advanced, disable
+  - Enable Cinema Trailers
+  - Enable video preview thumbnails
+- Again, these steps are done to minimize unnecessary CPU load.
+- Note: Quality settings has to be set maximum on every client mobile app, desktop app or web browser.
