@@ -31,7 +31,7 @@ Till now Radarr and Nzbget are communicating to each other. Now it is time to lo
 
 - Go to Settings->Schedule Tasks and mark according to the image below.
 
-  ![GitHub Logo](../images/plextasks.jpg)
+  ![GitHub Logo](../images/plexTasks.jpg)
 
 
 

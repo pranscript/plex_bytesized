@@ -1,6 +1,6 @@
 # Radarr
 
-Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refer [this guide](radarr/radarrV2 to V3(nightly).md) to update to V3.
+Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refer [this guide](radarrV2 to V3(nightly).md) to update to V3.
 
 - The first step is to get Usenet indexers and torrent indexers.
 - Then go to settings and click on "Show advanced settings". This will be helpful to change specific settings.

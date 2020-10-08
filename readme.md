@@ -84,3 +84,7 @@ Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/
 # Radarr
 
 Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
+
+# Plex
+
+Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)
