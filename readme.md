@@ -164,13 +164,13 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 
 Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
 
-# Radarr
-
-Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
-
 # Jackett
 
 Follow Here [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett)
+
+# Radarr
+
+Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
 
 # Plex
 

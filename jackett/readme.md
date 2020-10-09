@@ -18,6 +18,8 @@
 
     ![GitHub Logo](../images/jackett.jpg)
 
+- The next steps needs Radarr or Sonarr. So you can finish the setup of [Radarr guide](https://github.com/pranscript/plex_bytesized/tree/master/radarr) and can continue from here.
+
 - Go to Radarr or Sonaar->Settings->Indexer->+
 
 - Chose "Torznab Custom" 
