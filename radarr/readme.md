@@ -23,15 +23,11 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 
 
+- For torrent indexers, we will use Jackett that we set up at the starting. Remember that Jackett is helpful when you want to add many torrent indexers. You can follow this [Jackett guide](https://github.com/pranscript/plex_bytesized/tree/master/jackett) for more details. 
 
-
-- For torrent indexers, we will use Jackett that we set up at the starting. Remember that Jackett is helpful when you want to add many torrent indexers. 
-
-- Same steps to a add a torrent indexers.
+- Same steps to add a torrent indexers.
 
 - For torrent indexers, we will use Jackett that we set up at the starting. Remember that Jackett is helpful when you want to add many torrent indexers. 
-
-- Same steps to a add a torrent indexers.
 
 - Click on ""+"" and this time select "Torznab" since we are using Jackett to handle it for us
 

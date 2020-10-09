@@ -168,6 +168,10 @@ Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/
 
 Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
 
+# Jackett
+
+Follow Here [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett)
+
 # Plex
 
 Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)
