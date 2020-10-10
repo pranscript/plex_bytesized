@@ -189,3 +189,8 @@ Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/ra
 # 6. Plex
 
 Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)
+
+# 7. Bazarr
+
+Follow Here [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr)
+
