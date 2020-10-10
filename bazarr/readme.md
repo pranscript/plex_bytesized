@@ -8,7 +8,7 @@
 
 - Set what languages of subtitles you need
 
-  ![GitHub Logo](../images/bazarrlanguage.jpg)
+  ![GitHub Logo](../images/bazarrLanguage.jpg)
 
 - Save it
 
