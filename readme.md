@@ -26,7 +26,7 @@ What it doesn't include and why?
   - SSH (Putty for Windows)
   - Filezilla (FTP application for easy handling of files)
 
-# Rclone
+# 1. Rclone
 
 	1) Run "rclone config"
 	2) press n
@@ -43,10 +43,11 @@ What it doesn't include and why?
 	13) Write your team drive number if you selected "Y" above
 	13) Y (after checking all is fine)
 
-# Mounting Drive using Rclone
+# 2. Mounting Drive and Mergerfs
 
-We will follow [Bytesized Tutorial](https://bytesized-hosting.com/pages/setting-up-rclone-mergerfs-and-crontab-for-automated-cloud-storage)
-We will create the following folder through Putty on server:
+We will follow this wonderful tutorial - [Bytesized Tutorial](https://bytesized-hosting.com/pages/setting-up-rclone-mergerfs-and-crontab-for-automated-cloud-storage). Some few minor changes I did to the original. So let us continue.
+We will create the following folder through SSH on server:
+
 ```sh
 mkdir ~/mnt
 mkdir ~/mnt/gdrive
@@ -55,30 +56,17 @@ mkdir ~/media_tmp
 mkdir ~/scripts
 mkdir ~/.config/mergerfs
 ```
-Now create a script that will upload from local to google drive:
-```sh
-nano ~/scripts/uploadmedia
-# paste the below line there
-screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --delete-empty-src-dirs -v --stats 5s 
-# replace mountName that you put in rclone config and do not include < >
-# Press Ctrl + X
-# Press Y for yes.
-# Press Enter to confirm file name.
-chmod +x ~/scripts/uploadmedia  # to make the script executable.
-```
-Now a crontab that will upload automatically at specific time:
-```sh
-crontab -e
-0 5 * * * ~/scripts/uploadmedia // put this in the file
-Press Ctrl + X,  Y and the Enter
-```
-Now follow the link and create a startup and shutdown script or can continue from here. This is done so that while restarting the appbox, mount and mergerfs close and starts automatically.
 
-Remember to change USER_ID, GROUP_ID, USER_AGENT. First two can be seen by typing ```id``` in terminal. USER_AGENT can be any random string. So let's create the startup script.
+You can follow the link and create a startup and shutdown script if you want to use gcrypt otherwise you can continue from here. Both script are made so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
+
+So, open a file using nano.
 
 ```sh
 nano ~/.startup/gdrive
 ```
+
+Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First two can be seen by typing ```id``` in terminal. USER_AGENT can be any random string. So let's create the startup script.
+
 Paste the following code there (Copied from the link mentioned)
 
 - I have added few additional parameters to rclone which works good for plex.
@@ -153,25 +141,51 @@ Now to make both the files executable, run the following command
 chmod +x ~/.startup/gdrive
 chmod +x ~/.shutdown/gdrive
 ```
-Restart the appbox.
+
+Now create a script that will upload from local to google drive.
+
+As you can see, local files re in "media_tmp" and will be moved to mount that you created and deleted from local seamlessly 
+
+```sh
+#open a file
+nano ~/scripts/uploadmedia
+# paste the below line there
+screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --delete-empty-src-dirs -v --stats 5s 
+# replace mountName that you put in rclone config and do not include < >
+# Press Ctrl + X
+# Press Y for yes.
+# Press Enter to confirm file name.
+chmod +x ~/scripts/uploadmedia  # to make the script executable.
+```
+Now a crontab that will upload automatically the content from local to mount according to the script that we just made,at a specific time:
+```sh
+crontab -e
+# Put below line in the file
+0 5 * * * ~/scripts/uploadmedia
+# Save it by pressing Ctrl + X,  Y and the Enter
+```
+
+You can visit [crontab.guru](https://crontab.guru/) to understand the convention of setting up the time.
+
+Lastly, restart the appbox and wait few minutes to check.
 
 To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard or run ```ps -ef``` in the terminal to see both are running. 
 
 ![GitHub Logo](./images/mergerfs.jpg)
 
 
-# Nzbget
+# 3. Nzbget
 
 Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
 
-# Jackett
+# 4. Jackett
 
 Follow Here [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett)
 
-# Radarr
+# 5. Radarr
 
 Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
 
-# Plex
+# 6. Plex
 
 Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)

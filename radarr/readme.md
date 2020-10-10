@@ -97,7 +97,7 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
   ![GitHub Logo](../images/radarrPlex2.jpg)
 
-### 6. Connect  Download client (Nzbget)
+### 6. Connect  Download client (Nzbget) for NZBs
 
 - Go to Settings->Download Client
 
@@ -111,10 +111,16 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
   ![GitHub Logo](../images/radarrNzb.jpg)
 
+### 7. Connect  Download client (Deluge) for torrents
+
+- 
+
 ### 7. Enable "Completed Download Handling"
 
 - This is necessary to let Radarr fetch what is downloaded from the download client, in our case Nzbget.
 - Go to Setting->Download Clients->Completed Download Handling
 - Enable "Automatically Import Completed Downloads"
+
+
 
 ### 8. Restart Radarr
