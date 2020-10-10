@@ -57,20 +57,19 @@ mkdir ~/scripts
 mkdir ~/.config/mergerfs
 ```
 
-You can follow the link and create a startup and shutdown script if you want to use gcrypt otherwise you can continue from here. Both script are made so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
+You can follow the link and create a startup and shutdown script if you want to use gcrypt otherwise, you can continue from here. Both the script are created so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
 
-So, open a file using nano.
+So, open a file using nano to create a startup script.
 
 ```sh
 nano ~/.startup/gdrive
 ```
 
-Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First two can be seen by typing ```id``` in terminal. USER_AGENT can be any random string. So let's create the startup script.
-
-Paste the following code there (Copied from the link mentioned)
+Paste the following code there (Copied from the tutorial mentioned above)
 
 - I have added few additional parameters to rclone which works good for plex.
 - Remember to replace mountName with your mount name in rclone execution code down below. Remove < > too.
+- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First two can be seen by typing ```id``` in terminal.(create another SSH session to find this). USER_AGENT can be any random string. So let's create the startup script.
 
 ```sh
 #!/bin/bash
@@ -105,12 +104,12 @@ fi
 
 Save it.
 
-Now create a shutdown script from the link or can continue from here:
+Now create a shutdown script using similar process.
 
 ```sh
 nano ~/.shutdown/gdrive
 ```
-Paste this there (Copied from the link mentioned)
+Paste this there (Copied from the tutorial mentioned) above)
 ```sh
 #!/bin/bash
 
@@ -193,4 +192,14 @@ Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex
 # 7. Bazarr
 
 Follow Here [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr)
+
+# 8. Ombi
+
+Follow Here [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi)
+
+# 9. Filebot (Optional)
+
+Follow Here [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot)
+
+
 

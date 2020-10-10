@@ -27,7 +27,7 @@
 
 - Go to Settings->Radarr
 
-  - Hostname will by default to localhost(127.0.0.1) and port will be automatically filled to what port you see on the dashboard for Radarr
+  - Hostname will by default to localhost(127.0.0.1) and port will be automatically filled to what port you see on the dashboard for Radarr. Cross check if it is the same or not.
   - Put URL path as /radarr
   - Put Radarr's API key. You can go to Settings->General in Radarr to see your Radarr API key.
 
