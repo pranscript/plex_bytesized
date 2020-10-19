@@ -39,7 +39,10 @@ Till now Radarr and Nzbget are communicating to each other. Now it is time to lo
 
 - After settings, create a Movie library for the movies.
 - Put folder path as "/data/mnt/mnt_merge/Movies"
-- Remember, the path should go from "mnt_merge" as the only Plex will be able to find any new downloads.
+  - Remember that Movies folder must be present in the drive, then only it will show here.
+  - Similarly make a T.V series folder too in the drive.
+  - "mnt_merge" is the link between google drive and local drive.
+- Remember, the path should go from "mnt_merge" as then only Plex will be able to find any new downloads.
 - In advanced, disable
   - Enable Cinema Trailers
   - Enable video preview thumbnails

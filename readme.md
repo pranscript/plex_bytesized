@@ -177,27 +177,31 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 
 Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
 
-# 4. Jackett
+# 4. Deluge
+
+Follow Here - [Deluge](https://github.com/pranscript/plex_bytesized/tree/master/deluge)
+
+# 5. Jackett
 
 Follow Here [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett)
 
-# 5. Radarr
+# 6. Radarr
 
 Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
 
-# 6. Plex
+# 7. Plex
 
 Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)
 
-# 7. Bazarr
+# 8. Bazarr
 
 Follow Here [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr)
 
-# 8. Ombi
+# 9. Ombi
 
 Follow Here [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi)
 
-# 9. Filebot (Optional)
+# 10. Filebot (Optional)
 
 Follow Here [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot)
 
