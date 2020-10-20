@@ -73,6 +73,11 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 - Radarr by default puts the file inside its movie folder which will come handy in future.
 
+- The ultimate goal is to make plex understand the movie, so you can use the following  format.
+
+  - File name - ```{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}] {[Quality Full]} {[MediaInfo 3D]} {[MediaInfo VideoDynamicRange]} [{MediaInfo VideoBitDepth}bit] {[MediaInfo VideoCodec]} {[MediaInfo AudioCodec}-{MediaInfo AudioChannels]}{-Release Group} ```
+  - Folder Name - ```{Movie CleanTitle} {(Release Year)} [imdb-{ImdbId}]```
+
 - Below is an example. Make sure "Title" along with "Year" is there for Plex to work correctly.
 
   ![GitHub Logo](../images/radarMedia.jpg)
