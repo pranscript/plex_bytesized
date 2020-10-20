@@ -1,6 +1,6 @@
 # Plex Server Setup 
 
-Though many of you had saw tremendously good wiki and tutorials on how to setup, this is obviously one of those too. But it is mainly focused on hosting on Bytesied-Hosting provider. Also, I will be linking most of the stuffs to other tutorials from where I got the information. 
+Though many of you must have seen tremendously good wikis and tutorials on how to setup, this is obviously one of those too. But it is mainly focused on hosting on Bytesized-Hosting provider. Also, I will be linking most of the stuffs to other tutorials from where I got the information. 
 
 What is the end result?
   1. Rclone mount
@@ -171,6 +171,8 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 
 ![GitHub Logo](./images/mergerfs.jpg)
 
+# Utilities
+
 
 
 
@@ -187,4 +189,6 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | 11.   | Filebot | [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot) | [Forum](https://www.filebot.net/forums/)                     |
 
 
+
+# Extra
 
