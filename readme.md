@@ -8,7 +8,7 @@ What is the end result?
   2. Plex server setup
   3. Radarr for Movies
   4. Sonarr for T.V Shows
-  5. Nzbget and Sabnzbd for NZB handling 
+  5. Nzbget for NZB handling 
   6. Deluge (Torrent)
   7. Jackett (Indexer)
   8. Ombi (User Requests)
@@ -173,37 +173,19 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 ![GitHub Logo](./images/mergerfs.jpg)
 
 
-# 3. Nzbget
 
-Follow Here - [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget)
 
-# 4. Deluge
-
-Follow Here - [Deluge](https://github.com/pranscript/plex_bytesized/tree/master/deluge)
-
-# 5. Jackett
-
-Follow Here [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett)
-
-# 6. Radarr
-
-Follow Here [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr)
-
-# 7. Plex
-
-Follow Here [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex)
-
-# 8. Bazarr
-
-Follow Here [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr)
-
-# 9. Ombi
-
-Follow Here [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi)
-
-# 10. Filebot (Optional)
-
-Follow Here [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot)
+| Order | Utility | Guide                                                        | Support                                                      |
+| ----- | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 3.    | Nzbget  | [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 4.    | Deluge  | [Deluge](https://github.com/pranscript/plex_bytesized/tree/master/deluge) | [Forum](https://forum.deluge-torrent.org/)                   |
+| 5.    | Jackett | [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 6.    | Radarr  | [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 7.    | Sonarr  | [Sonarr](https://github.com/pranscript/plex_bytesized/tree/master/sonarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 8.    | Plex    | [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 9.    | Bazarr  | [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 10.   | Ombi    | [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 11.   | Filebot | [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
 
 
 

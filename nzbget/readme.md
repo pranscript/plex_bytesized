@@ -1,7 +1,7 @@
 # Nzbget
 
 - The first thing you need is a Usenet server.
-- We will be using Nzbget only for downloading Movies
+- We will be using Nzbget only for downloading Movies and Series from Usenet servers.
 - Only two things needs to be changed in the Nzbget settings.
 
 1) Usenet Server Settings - Go to settings and select NEWS-SERVERS and input the information about your Usenet server. 
