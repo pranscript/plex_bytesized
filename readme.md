@@ -1,4 +1,3 @@
-# (In Progress)
 # Plex Server Setup 
 
 Though many of you had saw tremendously good wiki and tutorials on how to setup, this is obviously one of those too. But it is mainly focused on hosting on Bytesied-Hosting provider. Also, I will be linking most of the stuffs to other tutorials from where I got the information. 
@@ -19,7 +18,7 @@ What it doesn't include and why?
   1. Couchpotato (since Radarr is much better)
   2. Sickbeard / Sickrage (since Sonarr is more stable)
   3. Olaris Rename (works great but Filebot is supreme)
-  4. Cardigann (Jakett works better)
+  4. Cardigann (Jackett works better)
 
 # Pre-requisites
   - Bytesized account
@@ -178,14 +177,14 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | Order | Utility | Guide                                                        | Support                                                      |
 | ----- | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 3.    | Nzbget  | [Nzbget](https://github.com/pranscript/plex_bytesized/tree/master/nzbget) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 4.    | Deluge  | [Deluge](https://github.com/pranscript/plex_bytesized/tree/master/deluge) | [Forum](https://forum.deluge-torrent.org/)                   |
-| 5.    | Jackett | [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 6.    | Radarr  | [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 7.    | Sonarr  | [Sonarr](https://github.com/pranscript/plex_bytesized/tree/master/sonarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 8.    | Plex    | [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 9.    | Bazarr  | [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 10.   | Ombi    | [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
-| 11.   | Filebot | [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot) | [Github](https://github.com/nzbget/nzbget) [Forum](https://forum.nzbget.net/) |
+| 4.    | Deluge  | [Deluge](https://github.com/pranscript/plex_bytesized/tree/master/deluge) | [Github](https://github.com/deluge-torrent/deluge) [Forum](https://forum.deluge-torrent.org/) |
+| 5.    | Jackett | [Jackett](https://github.com/pranscript/plex_bytesized/tree/master/jackett) | [Github](https://github.com/Jackett/Jackett) [Reddit](https://www.reddit.com/r/Jackett/) |
+| 6.    | Radarr  | [Radarr](https://github.com/pranscript/plex_bytesized/tree/master/radarr) | [Discord](https://discord.gg/u3x3Kp8) [Github](https://github.com/Radarr/Radarr) [Reddit](https://www.reddit.com/r/radarr) |
+| 7.    | Sonarr  | [Sonarr](https://github.com/pranscript/plex_bytesized/tree/master/sonarr) | [Discord](https://discord.gg/M6BvZn5) [Github](https://github.com/Sonarr/Sonarr) [Forum](https://forums.sonarr.tv/) [Reddit](https://www.reddit.com/r/sonarr) |
+| 8.    | Plex    | [Plex](https://github.com/pranscript/plex_bytesized/tree/master/plex) | [Forum](https://forums.plex.tv/)                             |
+| 9.    | Bazarr  | [Bazarr](https://github.com/pranscript/plex_bytesized/tree/master/bazarr) | [Discord](https://discord.com/invite/MH2e2eb) [Github](https://github.com/morpheus65535/bazarr) [Reddit](https://www.reddit.com/r/bazarr/) |
+| 10.   | Ombi    | [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi) | [Discord](https://discord.gg/Sa7wNWb) [Github](https://github.com/tidusjar/Ombi) |
+| 11.   | Filebot | [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot) | [Forum](https://www.filebot.net/forums/)                     |
 
 
 
