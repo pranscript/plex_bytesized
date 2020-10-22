@@ -188,7 +188,11 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | 10.   | Ombi    | [Ombi](https://github.com/pranscript/plex_bytesized/tree/master/ombi) | [Discord](https://discord.gg/Sa7wNWb) [Github](https://github.com/tidusjar/Ombi) |
 | 11.   | Filebot | [Filebot](https://github.com/pranscript/plex_bytesized/tree/master/filebot) | [Forum](https://www.filebot.net/forums/)                     |
 
-
-
 # Extra
 
+
+| Index | Topic                                                        | Link |
+| ----- | ------------------------------------------------------------ | ---- |
+| 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/extras/radar4K.md) |      |
+| 2.    | [Exporting all IMDB ids from plex Libraries](https://github.com/pranscript/plex_bytesized/tree/master/extras/exportIMDB.md) |      |
+| 3.    | SubZero bundle for Subtitles (Bazarr Alternative)            |      |

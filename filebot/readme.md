@@ -25,6 +25,6 @@ filebot -script fn:amc -rename "/home/hd*/username/media/Movies/" --output "/hom
 ### To rename a series,  the following command might be useful.
 
 ```sh
-filebot -script fn:amc -rename "/home/hd*/username/media/TV Shows/" --output "/home/hd*/username/renamedTVShows" -r --action move --db TheTVDB -non-strict --def excludeList=amc.txt "seriesFormat={n.replaceFirst(/^(?i)(The|A|An)\s(.+)/, /\$2, \$1/)} ({y}) /Season {s.pad(2)}/{n} - {s00e00} - {t} - {vf}.{vc.replace('x', 'h')}.{ac}.{af}{subt}"  --def clean=y --def subtitles=en --def "ut_label=TV" --conflict auto > filebotTV.txt
+filebot -script fn:amc -rename "/home/hd*/username/media/TV Shows/" --output "/home/hd*/username/renamedTVShows/" -r --action move --db TheTVDB -non-strict --def excludeList=amc.txt "seriesFormat={n.replaceFirst(/^(?i)(The|A|An)\s(.+)/, /\$2, \$1/)} ({y}) /Season {s.pad(2)}/{n} - {s00e00} - {t} - {vf}.{vc.replace('x', 'h')}.{ac}.{af}{subt}"  --def clean=y --def subtitles=en --def "ut_label=TV" --conflict auto > filebotTV.txt
 ```
 
