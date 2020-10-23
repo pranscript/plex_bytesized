@@ -28,7 +28,7 @@
    1. ```cp /home/hd*/username/.startup/radarr /home/hd*/username/.startup/radarr4K```
    2. ```cp /home/hd*/username/.shutdown/radarr /home/hd*/username/.shutdown/radarr4K```
 
-6. Change ```pid``` name and put ```data``` path inside to both the radarr instance's file inside ```~/.startup``` and ```~/.shutdown```
+6. Change ```pid``` name and put ```data``` to both the radarr instance's file inside ```~/.startup``` and ```~/.shutdown```
 
    1. Radarr startup
 

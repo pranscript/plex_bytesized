@@ -191,8 +191,7 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 # Extra
 
 
-| Index | Topic                                                        | Link |
-| ----- | ------------------------------------------------------------ | ---- |
-| 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/Extras/radarr4K.md) |      |
-| 2.    | [Exporting all IMDB ids from plex Libraries](https://github.com/pranscript/plex_bytesized/tree/master/extras/exportIMDB.md) |      |
-| 3.    | SubZero bundle for Subtitles (Bazarr Alternative)            |      |
+| Index | Topic                                                        |
+| ----- | ------------------------------------------------------------ |
+| 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/Extras/radarr4K.md) |
+| 3.    | [SubZero bundle for Subtitles (Bazarr Alternative)](https://github.com/pranscript/plex_bytesized/tree/master/Extras/subzero.md) |
