@@ -7,6 +7,12 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 ### 1. Indexer Setup
 
+- Next, you will need Indexers for NZB files.
+
+  - You can visit [this link](https://www.reddit.com/r/usenet/wiki/indexers) for all indexers.
+  - I will recommend [nzbgeek](https://nzbgeek.info/), [drunkenslug](https://drunkenslug.com/), [nzbplanet](http://www.nzbplanet.net/).
+  - You can get invites from [this link](https://www.reddit.com/r/UsenetInvites/).
+
 - Set up the indexers in Radarr by going to Settings->Indexers.
 
 - Click on ""+"" to add an Indexer.

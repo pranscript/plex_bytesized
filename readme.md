@@ -1,6 +1,6 @@
 # Plex Server Setup 
 
-Though many of you must have seen tremendously good wikis and tutorials on how to setup, this is obviously one of those too. But it is mainly focused on hosting on Bytesized-Hosting provider. Also, I will be linking most of the stuffs to other tutorials from where I got the information. 
+Though many of you must have seen tremendously useful wikis and tutorials on how to set up, this is also one of those. But it is mainly focused on hosting on Bytesized-Hosting provider. I will also be linking most of the stuff to other tutorials from where I got the information. 
 
 What is the end result?
   1. Rclone mount
@@ -17,7 +17,7 @@ What is the end result?
 What it doesn't include and why?
   1. Couchpotato (since Radarr is much better)
   2. Sickbeard / Sickrage (since Sonarr is more stable)
-  3. Olaris Rename (works great but Filebot is supreme)
+  3. Olaris Rename (works great, but Filebot is supreme)
   4. Cardigann (Jackett works better)
 
 # Pre-requisites
@@ -56,7 +56,7 @@ mkdir ~/scripts
 mkdir ~/.config/mergerfs
 ```
 
-You can follow the link and create a startup and shutdown script if you want to use gcrypt otherwise, you can continue from here. Both the script are created so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
+You can follow the link and create a startup and shutdown script if you want to use gcrypt; otherwise, you can continue from here. Both the scripts are created so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
 
 So, open a file using nano to create a startup script.
 
@@ -66,9 +66,9 @@ nano ~/.startup/gdrive
 
 Paste the following code there (Copied from the tutorial mentioned above)
 
-- I have added few additional parameters to rclone which works good for plex.
+- I have added a few additional parameters to rclone, which works well for plex.
 - Remember to replace mountName with your mount name in rclone execution code down below. Remove < > too.
-- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First two can be seen by typing ```id``` in terminal.(create another SSH session to find this). USER_AGENT can be any random string. So let's create the startup script.
+- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First, two can be seen by typing id in terminal. (create another SSH session to find this). USER_AGENT can be any random string. So let's make the startup script.
 
 ```sh
 #!/bin/bash
@@ -87,7 +87,7 @@ if [ -e $PID_FILE ]; then
     fi
 fi
 
-/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount <mountName>: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 16M --uid $USER_ID --gid $GROUP_ID --vfs-cache-mode writes
+/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount <mountName>: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 72h  --poll-interval 15s --vfs-read-chunk-size 64M --uid $USER_ID --gid $GROUP_ID
 
 PID_FILE=$HOME/.config/mergerfs/mergerfs.pid
 if [ -e $PID_FILE ]; then

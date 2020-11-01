@@ -1,8 +1,10 @@
 # Nzbget
 
 - The first thing you need is a Usenet server.
-- We will be using Nzbget only for downloading Movies and Series from Usenet servers.
-- Only two things needs to be changed in the Nzbget settings.
+  - You can visit [this link](https://www.reddit.com/r/usenet/wiki/providers) for additional info.
+  - I will recommend [Newshosting](https://www.newshosting.com/), [Eweka](https://www.eweka.nl) etc.
+- We will be using Nzbget for downloading from Usenet servers.
+- Only two things are there to change in the Nzbget settings.
 
 1) Usenet Server Settings - Go to settings and select NEWS-SERVERS and input the information about your Usenet server. 
 
