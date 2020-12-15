@@ -87,7 +87,7 @@ if [ -e $PID_FILE ]; then
     fi
 fi
 
-/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount <mountName>: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 1000h --cache-info-age 1500h  --poll-interval 15s --vfs-read-chunk-size 32M --vfs-cache-mode full --vfs-cache-max-size 200G --vfs-cache-max-age 336h --uid $USER_ID --gid $GROUP_ID
+/sbin/start-stop-daemon -S --pidfile $PID_FILE --make-pidfile -u $USER -d $HOME -b -a /usr/local/bin/rclone -- mount <mountName>: ~/mnt/gdrive --allow-other --user-agent="$USER_AGENT" --timeout 1h --dir-cache-time 1000h --cache-info-age 1500h  --poll-interval 15s --vfs-read-chunk-size 32M --buffer-size 32M --vfs-read-ahead 256M --vfs-cache-mode full --vfs-cache-max-size 200G --vfs-cache-max-age 336h --uid $USER_ID --gid $GROUP_ID
 
 PID_FILE=$HOME/.config/mergerfs/mergerfs.pid
 if [ -e $PID_FILE ]; then
@@ -194,4 +194,4 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | Index | Topic                                                        |
 | ----- | ------------------------------------------------------------ |
 | 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/Extras/radarr4K.md) |
-| 3.    | [SubZero bundle for Subtitles (Bazarr Alternative)](https://github.com/pranscript/plex_bytesized/tree/master/Extras/subzero.md) |
+| 2.    | [SubZero bundle for Subtitles (Bazarr Alternative)](https://github.com/pranscript/plex_bytesized/tree/master/Extras/subzero.md) |

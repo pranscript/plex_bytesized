@@ -100,7 +100,7 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 - For Plex port, click on the "+" icon to see the port to connect to. 
 
-- Use SSL, authenticate and check update library
+- Use SSL, authenticate and uncheck update library
 
 - Test the connection and save it.
 
