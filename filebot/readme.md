@@ -1,5 +1,7 @@
 # Filebot
 
+Since, we used Radarr and Sonarr for the renaming, we are not using Filebot. Still, these are the commands that you can run manually on terminal or setup filebot to do the renaming and moving stuffs on server. ( We removed filebot.py in Nzbget and Unchecked filebot in deluge, so revert it back to use filebot)
+
 ### To rename a movie ,  the following command might be useful.
 
 ```sh

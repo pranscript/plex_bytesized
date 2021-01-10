@@ -1,6 +1,6 @@
 # Bazarr
 
-- Bazarr will help to manage subtitles for you according to what Sonarr and Radarr are managing.
+- Bazarr will help to manage subtitles for you according to what Sonarr and Radarr are monitoring.
 
 - Most of the default settings works for Bazarr. We will setup few mandatory things.
 
@@ -27,7 +27,7 @@
 
 - Go to Settings->Radarr
 
-  - Hostname will by default to localhost(127.0.0.1) and port will be automatically filled to what port you see on the dashboard for Radarr. Cross check if it is the same or not.
+  - Hostname will be by default to localhost(127.0.0.1) and port will be automatically filled to what port you see on the dashboard for Radarr. Cross check if it is the same or not.
   - Put URL path as /radarr
   - Put Radarr's API key. You can go to Settings->General in Radarr to see your Radarr API key.
 
@@ -39,4 +39,4 @@
 
 
 
-Note: You can go to System->Tasks in Bazarr to figure out at in how much time interval, a specific task will get executed.
+Note: You can go to System->Tasks in Bazarr to figure out in how much time interval, a specific task will get executed.

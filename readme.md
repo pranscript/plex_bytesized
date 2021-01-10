@@ -31,7 +31,7 @@ What it doesn't include and why?
 	2) press n
 	3) Give name
 	4) Choose 13 for Google Drive
-	5) Put Clinet Id
+	5) Put Client I.d
 	6) Put Client Secret
 	7) Put 1 (scope full access)
 	8) Root folder default
@@ -44,8 +44,8 @@ What it doesn't include and why?
 
 # 2. Mounting Drive and Mergerfs
 
-We will follow this wonderful tutorial - [Bytesized Tutorial](https://bytesized-hosting.com/pages/setting-up-rclone-mergerfs-and-crontab-for-automated-cloud-storage). Some few minor changes I did to the original. So let us continue.
-We will create the following folder through SSH on server:
+We will follow this wonderful tutorial - [Bytesized Tutorial](https://bytesized-hosting.com/pages/setting-up-rclone-mergerfs-and-crontab-for-automated-cloud-storage). I did some few minor changes to Rclone parameters which I feel worked much better. So, let us continue. Rclone is used to mount the google drive and mergerfs fuses this drive to make flow of data from server to drive seamless. 
+We will create the following folder through SSH on the server:
 
 ```sh
 mkdir ~/mnt
@@ -56,7 +56,7 @@ mkdir ~/scripts
 mkdir ~/.config/mergerfs
 ```
 
-You can follow the link and create a startup and shutdown script if you want to use gcrypt; otherwise, you can continue from here. Both the scripts are created so that while restarting the appbox, rclone mount and mergerfs automatically starts on its own.
+You can follow the link mentioned above and create a startup and shutdown script if you want to use gcrypt (encrypt drive); otherwise, you can continue from here. I personally do not encrypt. Both the scripts are created so that while restarting the appbox (server), Rclone mount and mergerfs automatically starts on its own.
 
 So, open a file using nano to create a startup script.
 
@@ -64,11 +64,11 @@ So, open a file using nano to create a startup script.
 nano ~/.startup/gdrive
 ```
 
-Paste the following code there (Copied from the tutorial mentioned above)
+Paste the following code there (Copied from the tutorial link mentioned above)
 
-- I have added a few additional parameters to rclone, which works well for plex.
-- Remember to replace mountName with your mount name in rclone execution code down below. Remove < > too.
-- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First, two can be seen by typing id in terminal. (create another SSH session to find this). USER_AGENT can be any random string. So let's make the startup script.
+- I have added a few additional parameters to Rclone, which works well for plex.
+- Remember to replace mountName with your mount name, in Rclone execution code down below. Remove < > too.
+- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First, two can be seen by typing ```id``` in terminal. (you can create another SSH session to find this if you are inside nano). USER_AGENT can be any random string. So let's make the startup script.
 
 ```sh
 #!/bin/bash
@@ -108,7 +108,7 @@ Now create a shutdown script using similar process.
 ```sh
 nano ~/.shutdown/gdrive
 ```
-Paste this there (Copied from the tutorial mentioned) above)
+Paste the below code (Copied from the tutorial mentioned above)
 ```sh
 #!/bin/bash
 
@@ -140,34 +140,39 @@ chmod +x ~/.startup/gdrive
 chmod +x ~/.shutdown/gdrive
 ```
 
-Now create a script that will upload from local to google drive.
+Till now, we have made the script that will mount and unmount the drive while restarting the server.
 
-As you can see, local files re in "media_tmp" and will be moved to mount that you created and deleted from local seamlessly 
+Now create a script that will upload from Bytesized local drive to google drive.
+
+As you can see, we have created a folder "media_tmp", which will store the downloaded files locally on Bytesized. We will move these files from this folder to our google drive and in the process, will delete the local.
 
 ```sh
-#open a file
+#create a file inside scripts folder
 nano ~/scripts/uploadmedia
 # paste the below line there
-screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --delete-empty-src-dirs -v --stats 5s 
+screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --delete-empty-src-dirs -P --stats 20s --log-file=rcloneMoviesLog.txt
 # replace mountName that you put in rclone config and do not include < >
 # Press Ctrl + X
 # Press Y for yes.
-# Press Enter to confirm file name.
+# Press Enter to save and confirm file name.
 chmod +x ~/scripts/uploadmedia  # to make the script executable.
 ```
-Now a crontab that will upload automatically the content from local to mount according to the script that we just made,at a specific time:
+We created the script to upload files. Now, we will create a cron job that will upload automatically, the content from local to our drive according to the script that we just made,at a specific time:
+
 ```sh
+# open crontab
 crontab -e
 # Put below line in the file
 0 5 * * * ~/scripts/uploadmedia
 # Save it by pressing Ctrl + X,  Y and the Enter
+# This will upload everyday at 5 a.m server time.
 ```
 
 You can visit [crontab.guru](https://crontab.guru/) to understand the convention of setting up the time.
 
-Lastly, restart the appbox and wait few minutes to check.
+At the end, restart the appbox (server) and wait few minutes for it to mount (generally huge collection takes time to mount. Small drive will mount instantly).
 
-To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard or run ```ps -ef``` in the terminal to see both are running. 
+To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard on Bytesized websute or you can run ```ps -ef``` in the terminal to see both are running. 
 
 ![GitHub Logo](./images/mergerfs.jpg)
 
@@ -195,3 +200,4 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | ----- | ------------------------------------------------------------ |
 | 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/Extras/radarr4K.md) |
 | 2.    | [SubZero bundle for Subtitles (Bazarr Alternative)](https://github.com/pranscript/plex_bytesized/tree/master/Extras/subzero.md) |
+| 3.    | [OMBI Alternative - Requestrr for discord](https://github.com/darkalfx/requestrr) |

@@ -1,6 +1,6 @@
 # Ombi
 
-OMBI manages your client's Movies and Series requests.
+OMBI manages your client's Movies and Series requests. ( Update - I personally use [Requestrr](https://github.com/darkalfx/requestrr) nnow which uses discord to request)
 
 - First step is to connect Radarr
   - Go to Settings->Moveis->Radarr
