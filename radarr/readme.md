@@ -135,11 +135,17 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 - Go to Setting->Download Clients->Completed Download Handling
 - Enable "Automatically Import Completed Downloads"
 
-### 9. Restart Radarr
+### 9. Import Library folder
 
-10. Additional Info (Optional )
-    1. You can put restrictions in Indexers. This will tell indexer was to and what not to download. For example, we definitely want h264, h265, x264, x265 in the filename. Just an example.
-    2. You can have advance control through custom format. Reddit research will help you on this. 
+- Go to Library Import->choose another folder
+- Remember, path should be through "media_merge". For example
+  - /home/hd*/username/mnt/media_merge/yourFolder
+
+### 10. Restart Radarr
+
+### 11. Additional Info (Optional )
+1. You can put restrictions in Indexers. This will tell indexer was to and what not to download. For example, we definitely want h264, h265, x264, x265 in the filename. Just an example.
+2. You can have advance control through custom format. Reddit research will help you on this. 
 
 
 
