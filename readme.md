@@ -201,6 +201,7 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 | 1.    | [Radarr 4K Instance](https://github.com/pranscript/plex_bytesized/tree/master/Extras/radarr4K.md) |
 | 2.    | [SubZero bundle for Subtitles (Bazarr Alternative)](https://github.com/pranscript/plex_bytesized/tree/master/Extras/subzero.md) |
 | 3.    | [OMBI Alternative - Requestrr for discord](https://github.com/darkalfx/requestrr) |
+| 4.    | [Gclone, to copy between drives using Service accounts](https://gist.github.com/pranscript/731831c8f48a0ee8fdbd2acc646fb7e2) |
 
 
 
