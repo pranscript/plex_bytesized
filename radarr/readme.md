@@ -80,8 +80,8 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 - The ultimate goal is to make plex understand the movie and and thus, accurate subtitles are fetched, so you can copy the following  format.
 
-  - File Name Format - ```{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}] {[Quality Full]} {[MediaInfo 3D]} {[MediaInfo VideoDynamicRange]} [{MediaInfo VideoBitDepth}bit] {[MediaInfo VideoCodec]} {[MediaInfo AudioCodec}-{MediaInfo AudioChannels]}{-Release Group} ```
-  - Folder Name Format- ```{Movie CleanTitle} {(Release Year)} [imdb-{ImdbId}]```
+  - **File Name Format** - ```{Movie CleanTitle} {(Release Year)} {Edition Tags} [imdb-{ImdbId}] {[Quality Full]} {[MediaInfo 3D]} {[MediaInfo VideoDynamicRange]} [{MediaInfo VideoBitDepth}bit] {[MediaInfo VideoCodec]} {[MediaInfo AudioCodec}-{MediaInfo AudioChannels]}{-Release Group} ```
+  - **Folder Name Format**- ```{Movie CleanTitle} {(Release Year)} [imdb-{ImdbId}]```
 
 - Below is an example. Make sure "Title" along with "Year" is definitely there if not others, for Plex to work correctly.
 
@@ -133,13 +133,13 @@ Note: These steps are for Radarr V3. If you are still in Radarr V2, you can refe
 
 - This is necessary to let Radarr fetch what is downloaded from both the download client, in our case Nzbget and Deluge.
 - Go to Setting->Download Clients->Completed Download Handling
-- Enable "Automatically Import Completed Downloads"
+- **Enable** "Automatically Import Completed Downloads"
 
 ### 9. Import Library folder
 
 - Go to Library Import->choose another folder
 - Remember, path should be through "media_merge". For example
-  - /home/hd*/username/mnt/media_merge/yourFolder
+  - **/home/hd*/username/mnt/media_merge/yourFolder**
 
 ### 10. Restart Radarr
 

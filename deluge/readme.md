@@ -10,7 +10,7 @@ For downloading torrents, deluge is used.
   
     ![GitHub Logo](../images/delugeEncr.jpg)
 - Go to Preferences -> Proxy
-  - This is the most important setting. You have to setup "Sock5 proxy with Auth" for all sections.
+  - **This is the most important setting. You have to setup "Sock5 proxy with Auth" for all sections.**
   - All the info will be provided by your VPN service.
   
     ![GitHub Logo](../images/delugeProxy.jpg)

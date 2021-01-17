@@ -24,6 +24,7 @@ What it doesn't include and why?
   - Bytesized account
   - SSH (Putty for Windows)
   - Filezilla (FTP application for easy handling of files)
+  - Your own **Client I.D and Secret** for Rclone - You can see [this tutorial](https://quickbox.io/knowledge-base/creating-a-google-api-client-id-client-secret-code/).
 
 # 1. Rclone
 
@@ -67,8 +68,8 @@ nano ~/.startup/gdrive
 Paste the following code there (Copied from the tutorial link mentioned above)
 
 - I have added a few additional parameters to Rclone, which works well for plex.
-- Remember to replace mountName with your mount name, in Rclone execution code down below. Remove < > too.
-- Remember to change USER_ID, GROUP_ID, USER_AGENT in the code below. First, two can be seen by typing ```id``` in terminal. (you can create another SSH session to find this if you are inside nano). USER_AGENT can be any random string. So let's make the startup script.
+- Remember to replace **mountName** with your mount name, in Rclone execution code down below. Remove < > too.
+- Remember to change **USER_ID, GROUP_ID, USER_AGENT** in the code below. First, two can be seen by typing **```id```** in terminal and copy the numeric numbers. (you can create another SSH session to find this if you are inside nano). USER_AGENT can be any random string. So let's make the startup script.
 
 ```sh
 #!/bin/bash
@@ -157,7 +158,7 @@ screen -dmS uploadmedia /usr/local/bin/rclone move ~/media_tmp <mountName>: --de
 # Press Enter to save and confirm file name.
 chmod +x ~/scripts/uploadmedia  # to make the script executable.
 ```
-We created the script to upload files. Now, we will create a cron job that will upload automatically, the content from local to our drive according to the script that we just made,at a specific time:
+We created the script to upload files. Now, we will create a **cron job **that will upload automatically, the content from local to our drive according to the script that we just made,at a specific time:
 
 ```sh
 # open crontab
@@ -170,9 +171,9 @@ crontab -e
 
 You can visit [crontab.guru](https://crontab.guru/) to understand the convention of setting up the time.
 
-At the end, restart the appbox (server) and wait few minutes for it to mount (generally huge collection takes time to mount. Small drive will mount instantly).
+At the end, **restart** the appbox (server) and wait few minutes for it to mount (generally huge collection takes time to mount. Small drive will mount instantly).
 
-To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard on Bytesized websute or you can run ```ps -ef``` in the terminal to see both are running. 
+To cross check if both rclone and mergerfs is working, you can check from the memory usage dashboard on Bytesized websute or you can run **```ps -ef```** in the terminal to see both are running. 
 
 ![GitHub Logo](./images/mergerfs.jpg)
 
@@ -208,4 +209,10 @@ To cross check if both rclone and mergerfs is working, you can check from the me
 # Troubleshoot
 
 [Common problems and fixes](https://github.com/pranscript/plex_bytesized/tree/master/troubleshoot)
+
+
+
+```markdown
+<a href="https://www.buymeacoffee.com/pranscript" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+```
 
